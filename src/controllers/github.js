@@ -1,13 +1,15 @@
+const apiGitHubService = require('../services/github')
+
 /**
  * @param {import('express').Request} req
  * @param {import('express').Response} res
  */
-const get = async (req, res) => {
-  const result = { name: 'carlos' }
+const getRepository = async (req, res) => {
+  const result = await apiGitHubService.getRepo()
   console.log(result)
   return res.status(200).send(result)
 }
 
 module.exports = {
-  get
+  getRepository
 }
