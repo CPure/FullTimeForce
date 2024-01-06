@@ -1,11 +1,11 @@
 const apiGitHub = require('./client')
 
-const getRepo = async () => {  
-
+const getRepo = async (name) => {  
+  console.log(name)
   try {
     const result = await apiGitHub.request("GET /repos/{owner}/{repo}/commits", {
       owner: "CPure",
-      repo: "FullTimeForce",
+      repo: name,
     })
     return result.data
   } catch (e) {

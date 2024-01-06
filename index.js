@@ -2,7 +2,7 @@ const { app } = require('./app')
 
 const startup = async () =>{
 
-  const PORT = process.env.PORT || 3000
+  const PORT = process.env.PORT || 3100
 
   app.set('port', PORT)
 

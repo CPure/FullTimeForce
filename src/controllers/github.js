@@ -5,8 +5,8 @@ const apiGitHubService = require('../services/github')
  * @param {import('express').Response} res
  */
 const getRepository = async (req, res) => {
-  const result = await apiGitHubService.getRepo()
-  console.log(result)
+  const {name} = req.query
+  const result = await apiGitHubService.getRepo(name)
   return res.status(200).send(result)
 }
 
