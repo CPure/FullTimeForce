@@ -1,7 +1,7 @@
 const { Octokit, App } = require("octokit");
 
 const octokit = new Octokit({ 
-  auth: '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'
+  auth: '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'
 });
 
 module.exports = octokit

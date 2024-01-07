@@ -8,6 +8,7 @@ const getRepo = async (name) => {
     })
     return result.data
   } catch (e) {
+    console.log(e)
     if (e.response?.status !== 200) {
       return e.response.data.message
     }
